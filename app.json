@@ -1,0 +1,17 @@
+{
+  "name": "dimsum",
+  "displayName": "dimsum",
+  "expo": {
+    "name": "dimsum",
+    "slug": "dimsum",
+    "version": "1.0.0",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
