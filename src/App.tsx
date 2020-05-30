@@ -46,7 +46,19 @@ function DetailsScreen({ navigation }) {
 function HomeNavigator({navigation}) {
 	return (
 		<Stack.Navigator initialRouteName="Home">
-			<Stack.Screen name="Home" component={HomeScreen} options={{ title: 'My home' }}/>
+			<Stack.Screen
+				name="Home"
+				component={HomeScreen}
+				options={{
+					title: 'My home',
+					headerLeft: () => (
+						<Button
+						  onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
+						  title="Info"
+						  color="#00cc00"
+						/>
+					  ),
+				}}/>
 			<Stack.Screen name="Details" component={DetailsScreen} />
       	</Stack.Navigator>
 	)
@@ -96,8 +108,10 @@ function Feed({ navigation }) {
 
 function MyDrawer() {
 	return (
-	  	<Drawer.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
-      		<Drawer.Screen name="Feed" component={Feed} />
+	  	<Drawer.Navigator initialRouteName="Feed" drawerContent={props => <CustomDrawerContent {...props} />}>
+			  <Drawer.Screen
+				  name="Feed" component={Feed}
+			  />
       		<Drawer.Screen name="Notifications" component={Notifications} />
 			<Drawer.Screen name="Home Screen" component={HomeNavigator} />
 	  	</Drawer.Navigator>
