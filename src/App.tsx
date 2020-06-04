@@ -6,7 +6,7 @@ import {
 import { createStackNavigator } from '@react-navigation/stack';
 import HomeNavigator from './navigators/HomeNavigator';
 import ItemNavigator from './navigators/ItemNavigator';
-
+import { ThemeProvider } from 'react-native-elements';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -32,9 +32,11 @@ function MyDrawer() {
 
 function App() {
   return (
-    <NavigationContainer>
-		<MyDrawer />
-    </NavigationContainer>
+	<ThemeProvider>
+		<NavigationContainer>
+			<MyDrawer />
+		</NavigationContainer>
+	</ThemeProvider>
   );
 }
 

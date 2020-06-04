@@ -25,7 +25,6 @@ function HomeNavigator({navigation}) {
 				}}/>
 			<Stack.Screen name="Details" component={ItemDetailsScreen} />
       	</Stack.Navigator>
-
 	);
 }
 
