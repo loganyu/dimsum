@@ -1,7 +1,5 @@
 import * as React from "react";
-import { Image, View, Text, FlatList } from "react-native";
-import { Card, ListItem, Button, Icon } from "react-native-elements";
-import { CAA_SIU_BUN } from "../images/index";
+import { FlatList } from "react-native";
 import DimSumListItem from "./DimSumListItem";
 import { dimSumItems } from "../data/mockData";
 

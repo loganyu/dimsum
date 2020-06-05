@@ -1,12 +1,10 @@
 import * as React from "react";
-import { NavigationContainer, DrawerActions } from "@react-navigation/native";
+import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import { createStackNavigator } from "@react-navigation/stack";
 import HomeNavigator from "./navigators/HomeNavigator";
 import ItemNavigator from "./navigators/ItemNavigator";
 import { ThemeProvider } from "react-native-elements";
 
-const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
 
 function MyDrawer() {

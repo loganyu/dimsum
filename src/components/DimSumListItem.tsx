@@ -1,7 +1,6 @@
 import * as React from "react";
 import { View, TouchableOpacity, Dimensions } from "react-native";
-import { Card, ListItem, Button, Icon } from "react-native-elements";
-import { CAA_SIU_BUN } from "../images/index";
+import { Card } from "react-native-elements";
 
 const screenWidth = Math.round(Dimensions.get("window").width);
 
