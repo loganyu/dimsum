@@ -3,7 +3,7 @@ import { Button } from "react-native";
 import { DrawerActions } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import HomeScreen from "../screens/HomeScreen";
-import ItemDetailsScreen from "../screens/ItemDetailsScreen";
+import DimSumDetailsScreen from "../screens/DimSumDetailsScreen";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { RootStackParamList } from "../App";
 
@@ -38,7 +38,7 @@ function HomeNavigator({ navigation }: HomeNavigatorProps): JSX.Element {
           headerLeft: () => HeaderLeftButton({ navigation }),
         }}
       />
-      <Stack.Screen name="Details" component={ItemDetailsScreen} />
+      <Stack.Screen name="DimSumDetails" component={DimSumDetailsScreen} />
     </Stack.Navigator>
   );
 }

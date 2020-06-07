@@ -1,4 +1,5 @@
 import * as React from "react";
+import { ImageURISource } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import HomeNavigator from "./navigators/HomeNavigator";
@@ -7,6 +8,7 @@ import { ThemeProvider } from "react-native-elements";
 
 export type RootStackParamList = {
   Details: undefined;
+  DimSumDetails: { item: { name: string; image: ImageURISource } };
   Home: undefined;
   Items: undefined;
 };
