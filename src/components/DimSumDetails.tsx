@@ -1,12 +1,14 @@
 import * as React from "react";
+
 import {
-  View,
-  TouchableOpacity,
   Dimensions,
   Image,
   ImageURISource,
   StyleSheet,
+  TouchableOpacity,
+  View,
 } from "react-native";
+
 import { Card } from "react-native-elements";
 import { useHeaderHeight } from "@react-navigation/stack";
 

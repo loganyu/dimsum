@@ -1,6 +1,7 @@
 import * as React from "react";
-import { View } from "react-native";
+
 import DimSumList from "../components/DimSumList";
+import { View } from "react-native";
 
 function HomeScreen(): JSX.Element {
   return (

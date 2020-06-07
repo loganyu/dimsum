@@ -1,11 +1,12 @@
 import * as React from "react";
+
 import { Button } from "react-native";
 import { DrawerActions } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import ItemsScreen from "../screens/ItemsScreen";
 import ItemDetailsScreen from "../screens/ItemDetailsScreen";
+import ItemsScreen from "../screens/ItemsScreen";
 import { RootStackParamList } from "../App";
 import { StackNavigationProp } from "@react-navigation/stack";
+import { createStackNavigator } from "@react-navigation/stack";
 
 const Stack = createStackNavigator();
 

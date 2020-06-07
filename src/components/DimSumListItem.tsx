@@ -1,15 +1,16 @@
 import * as React from "react";
+
 import {
-  View,
-  TouchableOpacity,
   Dimensions,
   ImageURISource,
+  TouchableOpacity,
+  View,
 } from "react-native";
-import { Card } from "react-native-elements";
-import { useNavigation } from "@react-navigation/native";
 
-import { StackNavigationProp } from "@react-navigation/stack";
+import { Card } from "react-native-elements";
 import { RootStackParamList } from "../App";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
 
 const screenWidth = Math.round(Dimensions.get("window").width);
 

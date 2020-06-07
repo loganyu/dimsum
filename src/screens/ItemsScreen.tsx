@@ -1,8 +1,10 @@
 import * as React from "react";
-import { Button, View, Text } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { StackNavigationProp } from "@react-navigation/stack";
+
+import { Button, Text, View } from "react-native";
+
 import { RootStackParamList } from "../App";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useNavigation } from "@react-navigation/native";
 
 function ItemsScreen(): JSX.Element {
   const navigation = useNavigation<StackNavigationProp<RootStackParamList>>();

@@ -1,6 +1,7 @@
 import * as React from "react";
-import { FlatList } from "react-native";
+
 import DimSumListItem from "./DimSumListItem";
+import { FlatList } from "react-native";
 import { dimSumItems } from "../data/mockData";
 
 function DimSumList(): JSX.Element {

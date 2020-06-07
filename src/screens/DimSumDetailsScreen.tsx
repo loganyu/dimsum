@@ -1,8 +1,9 @@
 import * as React from "react";
-import { View } from "react-native";
+
 import DimSumDetails from "../components/DimSumDetails";
 import { RootStackParamList } from "../App";
 import { RouteProp } from "@react-navigation/native";
+import { View } from "react-native";
 
 type DimSumDetailsScreenRouteProp = RouteProp<
   RootStackParamList,
