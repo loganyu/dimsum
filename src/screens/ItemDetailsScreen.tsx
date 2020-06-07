@@ -1,7 +1,16 @@
 import * as React from "react";
 import { Button, View, Text } from "react-native";
+import { StackNavigationProp } from "@react-navigation/stack";
 
-function ItemDetailsScreen({ navigation }) {
+import { RootStackParamList } from "../App";
+
+interface ItemDetailsScreenProps {
+  navigation: StackNavigationProp<RootStackParamList>;
+}
+
+function ItemDetailsScreen({
+  navigation,
+}: ItemDetailsScreenProps): JSX.Element {
   return (
     <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
       <Text>Details Screen</Text>

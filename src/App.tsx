@@ -5,9 +5,15 @@ import HomeNavigator from "./navigators/HomeNavigator";
 import ItemNavigator from "./navigators/ItemNavigator";
 import { ThemeProvider } from "react-native-elements";
 
+export type RootStackParamList = {
+  Details: undefined;
+  Home: undefined;
+  Items: undefined;
+};
+
 const Drawer = createDrawerNavigator();
 
-function MyDrawer() {
+function MyDrawer(): JSX.Element {
   return (
     <Drawer.Navigator initialRouteName="Home">
       <Drawer.Screen name="Home" component={HomeNavigator} />
@@ -26,7 +32,7 @@ function MyDrawer() {
   );
 }
 
-function App() {
+function App(): JSX.Element {
   return (
     <ThemeProvider>
       <NavigationContainer>

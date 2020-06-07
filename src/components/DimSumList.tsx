@@ -3,7 +3,7 @@ import { FlatList } from "react-native";
 import DimSumListItem from "./DimSumListItem";
 import { dimSumItems } from "../data/mockData";
 
-function DimSumList() {
+function DimSumList(): JSX.Element {
   return (
     <FlatList
       data={dimSumItems}
