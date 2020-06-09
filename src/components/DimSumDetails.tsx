@@ -1,15 +1,14 @@
 import * as React from "react";
 
+import { Card, Divider, Text } from "react-native-elements";
 import {
   Dimensions,
   Image,
   ImageURISource,
   StyleSheet,
-  TouchableOpacity,
   View,
 } from "react-native";
 
-import { Card } from "react-native-elements";
 import { useHeaderHeight } from "@react-navigation/stack";
 
 const screenWidth = Math.round(Dimensions.get("window").width);
@@ -18,7 +17,7 @@ const screenHeight = Math.round(Dimensions.get("window").height);
 const styles = StyleSheet.create({
   image: {
     height: screenHeight / 2,
-    width: screenWidth,
+    width: screenWidth - 20,
   },
 });
 
@@ -26,6 +25,10 @@ interface DimSumDetailsProps {
   item: {
     image: ImageURISource;
     name: string;
+    pinyin: string;
+    jyutping: string;
+    chinese: string;
+    description: string;
   };
 }
 
@@ -33,18 +36,23 @@ function DimSumDetails({ item }: DimSumDetailsProps): JSX.Element {
   const headerHeight = useHeaderHeight();
 
   return (
-    <TouchableOpacity activeOpacity={0.9}>
-      <View>
-        <Card
-          containerStyle={{
-            height: screenHeight - headerHeight,
-          }}
-          title={item.name}
-        >
-          <Image style={styles.image} source={item.image} />
-        </Card>
-      </View>
-    </TouchableOpacity>
+    <View>
+      <Card
+        containerStyle={{
+          height: screenHeight - headerHeight,
+        }}
+        title={item.name}
+      >
+        <Image style={styles.image} source={item.image} />
+        <Text>{item.chinese}</Text>
+        <Divider />
+        <Text>Mandarin Pinyin: {item.pinyin}</Text>
+        <Divider />
+        <Text>Cantonese Jyutping: {item.jyutping}</Text>
+        <Divider />
+        <Text>{item.description}</Text>
+      </Card>
+    </View>
   );
 }
 
