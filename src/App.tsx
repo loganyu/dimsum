@@ -1,16 +1,17 @@
 import * as React from "react";
+
+import { CAA_SIU_BUN } from "./images";
+import { Categories } from "./constants";
+import HomeNavigator from "./navigators/HomeNavigator";
 import { ImageURISource } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import HomeNavigator from "./navigators/HomeNavigator";
-import ItemNavigator from "./navigators/ItemNavigator";
 import { ThemeProvider } from "react-native-elements";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 
 export type RootStackParamList = {
   Details: undefined;
   DimSumDetails: { item: { name: string; image: ImageURISource } };
   Home: undefined;
-  Items: undefined;
 };
 
 const Drawer = createDrawerNavigator();
@@ -18,18 +19,22 @@ const Drawer = createDrawerNavigator();
 function MyDrawer(): JSX.Element {
   return (
     <Drawer.Navigator initialRouteName="Home">
-      <Drawer.Screen name="Home" component={HomeNavigator} />
-      <Drawer.Screen name="Favorites" component={ItemNavigator} />
-      <Drawer.Screen name="All Dim Sum" component={ItemNavigator} />
-      <Drawer.Screen name="Popular" component={ItemNavigator} />
-      <Drawer.Screen name="Teas" component={ItemNavigator} />
-      <Drawer.Screen name="Steamed" component={ItemNavigator} />
-      <Drawer.Screen name="Savory" component={ItemNavigator} />
-      <Drawer.Screen name="Buns" component={ItemNavigator} />
-      <Drawer.Screen name="Desserts" component={ItemNavigator} />
-      <Drawer.Screen name="Dumplings" component={ItemNavigator} />
-      <Drawer.Screen name="Rice Noodle Rolls" component={ItemNavigator} />
-      <Drawer.Screen name="Congee and Rice" component={ItemNavigator} />
+      <Drawer.Screen name="All" component={HomeNavigator} />
+      <Drawer.Screen name={Categories.Popular} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.Teas} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.Steamed} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.Savory} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.Buns} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.Desserts} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.Dumplings} component={HomeNavigator} />
+      <Drawer.Screen
+        name={Categories.RiceNoodleRolls}
+        component={HomeNavigator}
+      />
+      <Drawer.Screen
+        name={Categories.CongeeAndRice}
+        component={HomeNavigator}
+      />
     </Drawer.Navigator>
   );
 }

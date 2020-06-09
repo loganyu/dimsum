@@ -11,17 +11,7 @@ import {
   SESAME_ROLL,
 } from "../images";
 
-export enum Categories {
-  Popular = "popular",
-  Teas = "teas",
-  Steamed = "steamed",
-  Savory = "savory",
-  Buns = "buns",
-  Desserts = "desserts",
-  Dumplings = "dumplings",
-  RiceNoodleRolls = "riceNoodleRolls",
-  CongeeAndRice = "congeeAndRice",
-}
+import { Categories } from "../constants";
 
 export const dimSumItems = [
   {

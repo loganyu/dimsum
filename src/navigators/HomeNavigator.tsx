@@ -1,16 +1,20 @@
 import * as React from "react";
-import { Button } from "react-native";
-import { DrawerActions } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
-import HomeScreen from "../screens/HomeScreen";
-import DimSumDetailsScreen from "../screens/DimSumDetailsScreen";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { RootStackParamList } from "../App";
 
-type HomeScreenNavigationProps = StackNavigationProp<RootStackParamList>;
+import { DrawerActions, RouteProp } from "@react-navigation/native";
+
+import { Button } from "react-native";
+import DimSumDetailsScreen from "../screens/DimSumDetailsScreen";
+import HomeScreen from "../screens/HomeScreen";
+import { RootStackParamList } from "../App";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { createStackNavigator } from "@react-navigation/stack";
+
+type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList>;
+type HomeScreenRouteProp = RouteProp<RootStackParamList, "Home">;
 
 type HomeNavigatorProps = {
-  navigation: HomeScreenNavigationProps;
+  navigation: HomeScreenNavigationProp;
+  route: HomeScreenRouteProp;
 };
 
 type HeadLeftButtonProps = {
@@ -27,14 +31,13 @@ const HeaderLeftButton = ({ navigation }: HeadLeftButtonProps) => (
 
 const Stack = createStackNavigator<RootStackParamList>();
 
-function HomeNavigator({ navigation }: HomeNavigatorProps): JSX.Element {
+function HomeNavigator({ navigation, route }: HomeNavigatorProps): JSX.Element {
   return (
-    <Stack.Navigator initialRouteName="Home">
+    <Stack.Navigator>
       <Stack.Screen
-        name="Home"
+        name={route.name}
         component={HomeScreen}
         options={{
-          title: "Home",
           headerLeft: () => HeaderLeftButton({ navigation }),
         }}
       />
