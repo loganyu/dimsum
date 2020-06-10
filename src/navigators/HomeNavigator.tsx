@@ -1,13 +1,16 @@
 import * as React from "react";
 
 import { DrawerActions, RouteProp } from "@react-navigation/native";
+import {
+  StackNavigationProp,
+  createStackNavigator,
+} from "@react-navigation/stack";
 
 import { Button } from "react-native";
+import { Categories } from "../constants";
 import DimSumDetailsScreen from "../screens/DimSumDetailsScreen";
 import HomeScreen from "../screens/HomeScreen";
 import { RootStackParamList } from "../App";
-import { StackNavigationProp } from "@react-navigation/stack";
-import { createStackNavigator } from "@react-navigation/stack";
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList>;
 type HomeScreenRouteProp = RouteProp<RootStackParamList, "Home">;

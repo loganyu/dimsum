@@ -1,4 +1,5 @@
 export enum Categories {
+  All = "All",
   Popular = "Popular",
   Teas = "Teas",
   Steamed = "Steamed",

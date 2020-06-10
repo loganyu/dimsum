@@ -19,7 +19,7 @@ const Drawer = createDrawerNavigator();
 function MyDrawer(): JSX.Element {
   return (
     <Drawer.Navigator initialRouteName="Home">
-      <Drawer.Screen name="All" component={HomeNavigator} />
+      <Drawer.Screen name={Categories.All} component={HomeNavigator} />
       <Drawer.Screen name={Categories.Popular} component={HomeNavigator} />
       <Drawer.Screen name={Categories.Teas} component={HomeNavigator} />
       <Drawer.Screen name={Categories.Steamed} component={HomeNavigator} />
