@@ -1,0 +1,15 @@
+{
+    "dev": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-dimsum-dev-145905-authRole",
+            "UnauthRoleArn": "arn:aws:iam::354667427951:role/amplify-dimsum-dev-145905-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::354667427951:role/amplify-dimsum-dev-145905-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "amplify-dimsum-dev-145905-deployment",
+            "UnauthRoleName": "amplify-dimsum-dev-145905-unauthRole",
+            "StackName": "amplify-dimsum-dev-145905",
+            "StackId": "arn:aws:cloudformation:us-east-1:354667427951:stack/amplify-dimsum-dev-145905/49f2bbf0-af3a-11ea-94e7-0ac49251e793",
+            "AmplifyAppId": "d30y5rdtkajga2"
+        }
+    }
+}
