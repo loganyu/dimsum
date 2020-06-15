@@ -1,12 +1,15 @@
 import * as React from "react";
 
-import { CAA_SIU_BUN } from "./images";
+import Amplify from "aws-amplify";
 import { Categories } from "./constants";
 import HomeNavigator from "./navigators/HomeNavigator";
 import { ImageURISource } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { ThemeProvider } from "react-native-elements";
+import config from "../aws-exports";
 import { createDrawerNavigator } from "@react-navigation/drawer";
+
+Amplify.configure(config);
 
 export type RootStackParamList = {
   Details: undefined;
