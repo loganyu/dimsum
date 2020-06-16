@@ -1,1 +1,15 @@
-{}
+{
+	"auth": {
+		"dimsum90dbc73c": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	},
+	"storage": {
+		"pictures": {
+			"service": "S3",
+			"providerPlugin": "awscloudformation"
+		}
+	}
+}

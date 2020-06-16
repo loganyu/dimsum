@@ -1,14 +1,9 @@
 import * as React from "react";
 
 import { Card, Divider, Text } from "react-native-elements";
-import {
-  Dimensions,
-  Image,
-  ImageURISource,
-  StyleSheet,
-  View,
-} from "react-native";
+import { Dimensions, Image, StyleSheet, View } from "react-native";
 
+import { getImageUrl } from "../utils";
 import { useHeaderHeight } from "@react-navigation/stack";
 
 const screenWidth = Math.round(Dimensions.get("window").width);
@@ -23,7 +18,7 @@ const styles = StyleSheet.create({
 
 interface DimSumDetailsProps {
   item: {
-    image: ImageURISource;
+    fileName: string;
     name: string;
     pinyin: string;
     jyutping: string;
@@ -43,7 +38,12 @@ function DimSumDetails({ item }: DimSumDetailsProps): JSX.Element {
         }}
         title={item.name}
       >
-        <Image style={styles.image} source={item.image} />
+        <Image
+          style={styles.image}
+          source={{
+            uri: getImageUrl(item.fileName),
+          }}
+        />
         <Text>{item.chinese}</Text>
         <Divider />
         <Text>Mandarin Pinyin: {item.pinyin}</Text>

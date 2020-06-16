@@ -3,7 +3,6 @@ import * as React from "react";
 import Amplify from "aws-amplify";
 import { Categories } from "./constants";
 import HomeNavigator from "./navigators/HomeNavigator";
-import { ImageURISource } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { ThemeProvider } from "react-native-elements";
 import config from "../aws-exports";
@@ -13,7 +12,7 @@ Amplify.configure(config);
 
 export type RootStackParamList = {
   Details: undefined;
-  DimSumDetails: { item: { name: string; image: ImageURISource } };
+  DimSumDetails: { item: { name: string; fileName: string } };
   Home: undefined;
 };
 
