@@ -1,0 +1,22 @@
+enum Category {
+  BUNS
+  CONGEE_AND_RICE
+  DESSERTS
+  DUMPLINGS
+  POPULAR
+  RICE_NOODLE_ROLLS
+  SAVORY
+  STEAMED
+  TEAS
+}
+
+type DimSum @model {
+  id: ID!
+  name: String!
+  fileName: String!
+  description: String!
+  jyutping: String!
+  pinyin: String!
+  chinese: String!
+  categories: [Category]!
+}

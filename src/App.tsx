@@ -1,7 +1,9 @@
-import * as React from "react";
+import React, { useEffect, useState } from "react";
+import { Text, View } from "react-native";
 
 import Amplify from "aws-amplify";
 import { Categories } from "./constants";
+import { DimSumProvider } from "./DimSumContext";
 import HomeNavigator from "./navigators/HomeNavigator";
 import { NavigationContainer } from "@react-navigation/native";
 import { ThemeProvider } from "react-native-elements";
@@ -21,20 +23,20 @@ const Drawer = createDrawerNavigator();
 function MyDrawer(): JSX.Element {
   return (
     <Drawer.Navigator initialRouteName="Home">
-      <Drawer.Screen name={Categories.All} component={HomeNavigator} />
-      <Drawer.Screen name={Categories.Popular} component={HomeNavigator} />
-      <Drawer.Screen name={Categories.Teas} component={HomeNavigator} />
-      <Drawer.Screen name={Categories.Steamed} component={HomeNavigator} />
-      <Drawer.Screen name={Categories.Savory} component={HomeNavigator} />
-      <Drawer.Screen name={Categories.Buns} component={HomeNavigator} />
-      <Drawer.Screen name={Categories.Desserts} component={HomeNavigator} />
-      <Drawer.Screen name={Categories.Dumplings} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.ALL} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.POPULAR} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.TEAS} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.STEAMED} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.SAVORY} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.BUNS} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.DESSERTS} component={HomeNavigator} />
+      <Drawer.Screen name={Categories.DUMPLINGS} component={HomeNavigator} />
       <Drawer.Screen
-        name={Categories.RiceNoodleRolls}
+        name={Categories.RICE_NOODLE_ROLLS}
         component={HomeNavigator}
       />
       <Drawer.Screen
-        name={Categories.CongeeAndRice}
+        name={Categories.CONGEE_AND_RICE}
         component={HomeNavigator}
       />
     </Drawer.Navigator>
@@ -43,11 +45,13 @@ function MyDrawer(): JSX.Element {
 
 function App(): JSX.Element {
   return (
-    <ThemeProvider>
-      <NavigationContainer>
-        <MyDrawer />
-      </NavigationContainer>
-    </ThemeProvider>
+    <DimSumProvider>
+      <ThemeProvider>
+        <NavigationContainer>
+          <MyDrawer />
+        </NavigationContainer>
+      </ThemeProvider>
+    </DimSumProvider>
   );
 }
 

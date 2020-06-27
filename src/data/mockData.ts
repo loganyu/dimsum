@@ -9,7 +9,7 @@ export const dimSumItems = [
     jyutping: "caa1 siu1 baau1",
     pinyin: "chā shāo bāo",
     chinese: "叉 燒 包",
-    categories: [Categories.All, Categories.Buns, Categories.Popular],
+    categories: [Categories.ALL, Categories.BUNS, Categories.POPULAR],
   },
   {
     name: "Beef Stomach",
@@ -19,7 +19,7 @@ export const dimSumItems = [
     jyutping: "ngau4 tou5",
     pinyin: "niú dǔ",
     chinese: "牛 肚",
-    categories: [Categories.All],
+    categories: [Categories.ALL],
   },
   {
     name: "Beef Tripe",
@@ -29,7 +29,7 @@ export const dimSumItems = [
     jyutping: "ngau4 paak3 jip6",
     pinyin: "niú bǎi yè",
     chinese: "牛 柏 葉",
-    categories: [Categories.All, Categories.Popular],
+    categories: [Categories.ALL, Categories.POPULAR],
   },
   {
     name: "Big Bun",
@@ -39,7 +39,7 @@ export const dimSumItems = [
     jyutping: "daai6 baau1",
     pinyin: "dà bāo",
     chinese: "大 包",
-    categories: [Categories.All, Categories.Buns],
+    categories: [Categories.ALL, Categories.BUNS],
   },
   {
     name: "Barbecued Pork Bun",
@@ -50,10 +50,10 @@ export const dimSumItems = [
     pinyin: "chā shāo bāo",
     chinese: "叉 燒 包",
     categories: [
-      Categories.All,
-      Categories.Buns,
-      Categories.Popular,
-      Categories.Steamed,
+      Categories.ALL,
+      Categories.BUNS,
+      Categories.POPULAR,
+      Categories.STEAMED,
     ],
   },
   {
@@ -64,7 +64,7 @@ export const dimSumItems = [
     jyutping: "caa1 siu1 sou1",
     pinyin: "chā shāo sū",
     chinese: "叉 燒 酥",
-    categories: [Categories.All],
+    categories: [Categories.ALL],
   },
   {
     name: "Baked Tapioca Pudding",
@@ -74,7 +74,7 @@ export const dimSumItems = [
     jyutping: "sai1 mai5 bou3 din1",
     pinyin: "xī mǐ bù diàn",
     chinese: "西 米 布 甸",
-    categories: [Categories.All],
+    categories: [Categories.ALL],
   },
   {
     name: "Duck Leg Wrap",
@@ -84,7 +84,7 @@ export const dimSumItems = [
     jyutping: "aap3 goek3 zaat3",
     pinyin: "yā jiǎo zhá",
     chinese: "鴨 腳 札",
-    categories: [Categories.All],
+    categories: [Categories.ALL],
   },
   {
     name: "Black Sesame Soup",
@@ -94,7 +94,7 @@ export const dimSumItems = [
     jyutping: "zi1 maa4 wu4",
     pinyin: "zhī ma hú",
     chinese: "芝 麻 糊",
-    categories: [Categories.All, Categories.Desserts],
+    categories: [Categories.ALL, Categories.DESSERTS],
   },
   {
     name: "Black Sesame Roll",
@@ -104,6 +104,6 @@ export const dimSumItems = [
     jyutping: "",
     pinyin: "zhī ma juǎn",
     chinese: "芝 麻 卷",
-    categories: [Categories.All, Categories.Desserts],
+    categories: [Categories.ALL, Categories.DESSERTS],
   },
 ];
