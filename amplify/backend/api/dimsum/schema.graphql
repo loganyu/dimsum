@@ -1,4 +1,5 @@
 enum Category {
+  ALL
   BUNS
   CONGEE_AND_RICE
   DESSERTS

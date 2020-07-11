@@ -4,6 +4,7 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "web": "expo start --web",
+    "seed": "node src/data/seed.js",
     "start": "react-native start",
     "test": "jest"
   },
@@ -17,6 +18,7 @@
     "aws-amplify-react-native": "^4.2.0",
     "expo": "^37.0.0",
     "expo-updates": "~0.2.1",
+    "graphql-tag": "^2.10.3",
     "mem": ">=4.0.0",
     "react": "16.9.0",
     "react-dom": "16.9.0",

@@ -101,7 +101,7 @@ export const dimSumItems = [
     fileName: "sesame_roll.jpg",
     description:
       "These soft and gelatinous rolls are made with ground black sesame. Unlike the related black sesame soup, this dessert is served cold.",
-    jyutping: "",
+    jyutping: "zi1 maa4 gyun2",
     pinyin: "zhī ma juǎn",
     chinese: "芝 麻 卷",
     categories: [Categories.ALL, Categories.DESSERTS],

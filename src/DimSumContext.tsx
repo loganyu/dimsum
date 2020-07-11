@@ -1,7 +1,6 @@
 import { API, graphqlOperation } from "aws-amplify";
 import React, { useEffect, useState } from "react";
 
-import { AsyncStorage } from "react-native";
 import { listDimSums } from "../src/graphql/queries";
 
 export const DimSumContext = React.createContext({});
