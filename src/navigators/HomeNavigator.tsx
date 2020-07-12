@@ -10,6 +10,7 @@ import { Button } from "react-native";
 import { Categories } from "../constants";
 import DimSumDetailsScreen from "../screens/DimSumDetailsScreen";
 import HomeScreen from "../screens/HomeScreen";
+import { Icon } from "react-native-elements";
 import { RootStackParamList } from "../App";
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList>;
@@ -25,10 +26,11 @@ type HeadLeftButtonProps = {
 };
 
 const HeaderLeftButton = ({ navigation }: HeadLeftButtonProps) => (
-  <Button
+  <Icon
+    name="bars"
+    type="font-awesome"
+    color="white"
     onPress={() => navigation.dispatch(DrawerActions.toggleDrawer())}
-    title="Menu"
-    color="#00cc00"
   />
 );
 
@@ -36,7 +38,13 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function HomeNavigator({ navigation, route }: HomeNavigatorProps): JSX.Element {
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{
+        headerTintColor: "white",
+        headerStyle: { backgroundColor: "red" },
+        headerLeftContainerStyle: { padding: 20 },
+      }}
+    >
       <Stack.Screen
         name={route.name}
         component={HomeScreen}
